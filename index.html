@@ -9,17 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
     </style>
-    <script type="text/javascript">
-        function Validate() {
-            var password = document.getElementById("pass").value;
-            var confirmPassword = document.getElementById("rePass").value;
-            if (password != confirmPassword) {
-                alert("Passwords do not match.");
-                return false;
-            }
-            return true;
-        }
-    </script>
+    
 </head>
 <body>
     <aside>
@@ -69,5 +59,16 @@
             and <a href="https://unsplash.com/@mischievous_penguins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Casey Horner</a> at <a href="https://unsplash.com/es/s/fotos/star-wars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
           </div>
     </footer>
+    <script type="text/javascript">
+        function Validate() {
+            var password = document.getElementById("pass").value;
+            var confirmPassword = document.getElementById("rePass").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
