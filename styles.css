@@ -79,8 +79,12 @@ input[type=submit]{
     
 }
 
-input:required:focus{
-    border-color:rgb(255, 142, 142) ;
+input:focus:invalid{
+  
+  background-color:rgb(255, 142, 142) ;
+}
+input:valid{
+  background-color: aliceblue;
 }
 
 footer{
