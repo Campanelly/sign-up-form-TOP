@@ -6,48 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Sign up</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    </style>
+    <script type="text/javascript">
+        function Validate() {
+            var password = document.getElementById("pass").value;
+            var confirmPassword = document.getElementById("rePass").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <aside>
-        <div>
+        <div class="logo">
             <h1>Galactic Empire</h1>
             <img src="./img/vader.jpg" alt="Darth Vader flexing his muscles">
-
         </div>
-        <p>Fotos de <a href="https://unsplash.com/@tommyvankessel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">TOMMY VAN KESSEL</a> en <a href="https://unsplash.com/es/s/fotos/star-wars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </p>
-        <p>y <a href="https://unsplash.com/@mischievous_penguins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Casey Horner</a> en <a href="https://unsplash.com/es/s/fotos/star-wars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </p>
+        
+        
     </aside>
     <article>
-        <header>
-            
+        <header>            
             <p>You've been waiting for this moment your entire life...</p>
             <p>ever dream of touching the stars?</p>
             <p>Want to dodge laser beams while failing all your shots?</p>
             <p>Eager to loose yourself in a white ocean of lookalikes?</p>
             <p class="emphazise">JOIN THE EMPIRE!</p>
         </header>
-        <main>
-            <p>text</p>
-            <form action="post">
+        
+            
+            <form >
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName">
+                <input type="text" id="firstName" name="firstName" required>
 
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName">
+                <input type="text" id="lastName" name="lastName" required>
 
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" placeholder="i.e.: your@mail.com" required>
 
                 <label for="pass">Password</label>
-                <input type="password" name="pass" id="pass">
+                <input type="password" name="pass" id="pass" pattern="^.{4,8}$" placeholder="must be between 4 and 8 characters long"required>
 
-                <label for="repatPass">Repeat Password</label>
-                <input type="password" name="rePass" id="repeatPass">
+                <label for="rePass">Repeat Password</label>
+                <input type="password" name="rePass" id="rePass" pattern="^.{4,8}$" required>
 
+                <input type="submit" value="JOIN!" onclick="return Validate()">
+                
             </form>
-        </main>
+            
+        
+        
     </article>
+    <footer>
+        <div class="license">
+            pics by <a href="https://unsplash.com/@tommyvankessel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">TOMMY VAN KESSEL</a> 
+            and <a href="https://unsplash.com/@mischievous_penguins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Casey Horner</a> at <a href="https://unsplash.com/es/s/fotos/star-wars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          </div>
+    </footer>
 </body>
 </html>
